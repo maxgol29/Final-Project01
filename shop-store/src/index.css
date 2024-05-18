@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  }
+    body {
+        background-color: white;
+        font-family: 'Roboto';
+    }
+    h5 {
+        @apply text-white;
+        @apply text-2xl;
+        @apply py-4;
+        @apply leading-3;
+    }
+    h2 {
+        @apply font-bold;
+        @apply text-6xl;
+        @apply leading-tight;
+    }
+}
+
+.navbar.fixed {
+    visibility: hidden;
+    transition: 2s ease-in-out;
+    width: 100%;
+    z-index: 20;
+}
+
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+.slick-prev:before
+{
+    content: url('./images/Other/slide-prev.png') !important;
+}
+.slick-next:before 
+{
+    content: url('./images/Other/slide-next.png') !important;
+    transform: scaleX(-1) !important;
+}
+
+.banner-clip-path {
+    clip-path: polygon(0 0, 88% 0, 100% 100%, 0% 100%);
+}
+
+.banner2-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+}
+
+.banner3-clip-path {
+    clip-path: polygon(3% 0, 100% 0, 100% 100%, 10% 100%);
+}
+
+.button-career-form:hover {
+    background-color:  #2e1065 !important;
+}
+
+.color-change-4x {
+	-webkit-animation: color-change-4x 6s linear infinite alternate both;
+	        animation: color-change-4x 6s linear infinite alternate both;
+}
+
+  @keyframes color-change-4x {
+    0% {
+      background: #19dcea;
+    }
+    33.3333% {
+      background: #8b55ab;
+    }
+    66.666% {
+      background: #a03535;
+    }
+    100% {
+      background: #9a8234;
+    }
+  }
+
+  .navbar--visible {
+    top: 0;
+  }
+  .navbar--hiden {
+    top: -100px;
+  }
